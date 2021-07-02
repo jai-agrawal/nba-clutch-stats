@@ -15,4 +15,4 @@ df['KLAW_Score'] = (df['MIN'] * df['W_PCT']) * df['PLUS_MINUS']
 df2 = df[['TEAM_NAME','KLAW_Score']]
 df2.sort_values(ascending=False,by='KLAW_Score',inplace=True)
 df2 = df2.reset_index(drop=True)
-print(df2)
+df2.to_csv('results.csv', index=False)
